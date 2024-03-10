@@ -11,13 +11,11 @@ public class SubscriptionStepDefinitions {
 
     SubscriptionPage subscriptionPage = new SubscriptionPage();
 
-
     @When("User click on Cart Page")
     public void user_get_in_to_cart_page()
     {
         subscriptionPage.cartPage();
     }
-
 
     @When("User enter email {string} in Subscription")
     public void user_give_email_in_subscription(String email)
@@ -25,7 +23,6 @@ public class SubscriptionStepDefinitions {
         subscriptionPage.setSubEmail(email);
 
     }
-
 
     @Then("Validate the Subscription succesfully sent")
     public void validate_the_subscription_succesfully_sent()

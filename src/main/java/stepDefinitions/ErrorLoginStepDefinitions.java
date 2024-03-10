@@ -11,7 +11,6 @@ public class ErrorLoginStepDefinitions {
     LoginPage loginPage = new LoginPage();
     ErrorLoginPage errorLoginPage = new ErrorLoginPage();
 
-
     @When("User enter email {string} and password {string}")
     public void user_is_loged_in_with_email_and_password(String email, String password) {
         if (email.equalsIgnoreCase("invalid")){

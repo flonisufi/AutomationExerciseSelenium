@@ -7,7 +7,7 @@ Feature: Register User with existing email
 
    @SignUp
    Scenario: Give the information in Signup Landing Page
-       When User register with name "Flonnii" and existing email "edi2@gmail.com"
+       When User register with name "valid" and existing email "valid"
        When User give all personal information
        | Element   | Information    |
        | Password  | Pakokosare1    |

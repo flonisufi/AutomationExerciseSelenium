@@ -33,6 +33,7 @@ public class ProductQuantityPage {
 
     public void addProduct()
     {
+        BrowserUtilities.waitForElementToAppear(addToCart);
         ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",addToCart);
         addToCart.click();
         BrowserUtilities.waitForElementToAppear(continueShopp);

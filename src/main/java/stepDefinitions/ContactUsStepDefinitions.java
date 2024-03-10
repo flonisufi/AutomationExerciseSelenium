@@ -11,9 +11,6 @@ public class ContactUsStepDefinitions {
 
     ContactUsPage contactUsPage = new ContactUsPage();
 
-
-
-
     @When("User click on Contact Us")
     public void user_get_in_to_contact_us()
     {

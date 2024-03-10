@@ -11,10 +11,14 @@ public class LogOutStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
 
-
     @When("User enter valid email {string} and password {string}")
-    public void user_is_loged_in_with_valid_email_and_password(String email, String password)
+    public void user_enter_valid_email_and_password(String email, String password)
     {
+        if(email.equalsIgnoreCase("valid"))
+        {
+            email = "florryyii2@gmail.com";
+            password = "Pakokosare1";
+        }
         loginPage.userLogedIn(email,password);
 
     }

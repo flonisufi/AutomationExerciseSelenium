@@ -4,7 +4,7 @@ Feature: End to End
   Background:
     Given User is on Automation Exercise Page
     When User is on SignUp/Login Page
-    When User enter valid email "florryyii2@gmail.com" and password "Pakokosare1"
+    When User enter valid email "valid" and password "valid"
 
     @ContactUs
 

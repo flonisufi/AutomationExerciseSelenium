@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 
 public class SignUpStepDefinitions  {
+
+    Faker faker = new Faker();
 
 
     SignUpPage signUpPage = new SignUpPage();
@@ -33,10 +36,14 @@ public class SignUpStepDefinitions  {
 
     }
 
-
     @When("User register with name {string} and existing email {string}")
     public void user_get_in_to_signup_page_and_register_with_name_and_existing_email(String name, String email)
     {
+        if (name.equalsIgnoreCase("valid"))
+        {
+            name = faker.name().fullName();
+            email = faker.internet().emailAddress();
+        }
         signUpPage.registerEmail(name,email);
 
     }
