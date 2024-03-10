@@ -10,6 +10,8 @@ import utilities.BrowserUtilities;
 import utilities.Driver;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class ContactUsPage {
 
@@ -47,11 +49,28 @@ public class ContactUsPage {
         contactUsBtn.click();
     }
 
-    public void informations()
+    public void informations(io.cucumber.datatable.DataTable dataTable)
     {
-        nameField.sendKeys(faker.name().fullName());
-        emailField.sendKeys("flonbaba@gmail.com");
-        subject.sendKeys("Client");
+        List<Map<String,String>> data = dataTable.asMaps(String.class, String.class);
+
+        for (Map<String,String>row : data)
+        {
+            String elementName = row.get("Element");
+            String information = row.get("Information");
+
+            switch (elementName)
+            {
+                case "Name":
+                    BrowserUtilities.waitForElementToAppear(nameField);
+                    nameField.sendKeys(information);
+                    break;
+                case "Email":
+                    emailField.sendKeys(information);
+                    break;
+                case "Subject":
+                    subject.sendKeys(information);
+            }
+        }
         message.sendKeys(faker.chuckNorris().fact());
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",submit);
         submit.click();

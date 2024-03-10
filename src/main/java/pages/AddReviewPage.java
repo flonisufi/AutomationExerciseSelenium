@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.BrowserUtilities;
 import utilities.Driver;
 
 import java.io.IOException;
@@ -43,6 +44,7 @@ public class AddReviewPage {
 
     public void giveInformations(String name,String email)
     {
+        BrowserUtilities.waitForElementToAppear(nameField);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",nameField);
         nameField.sendKeys(name);
         emailField.sendKeys(email);
@@ -61,6 +63,7 @@ public class AddReviewPage {
 
     public String reviewMessage()
     {
+        BrowserUtilities.waitForElementToAppear(confirmMessage);
         return confirmMessage.getText();
     }
 }

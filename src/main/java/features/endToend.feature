@@ -3,13 +3,19 @@ Feature: End to End
   Background:
     Given User is on Automation Exercise Page
     When User is on SignUp/Login Page
-    When User enter valid email "fannol1@gmail.com" and password "Pakokosare1"
+    When User enter valid email "florryyii2@gmail.com" and password "Pakokosare1"
 
     @ContactUs
 
     Scenario: Contact Us Form
       When User click on Contact Us
       When User give the informations
+      | Element | Information         |
+      | Name    | Flon                |
+      | Email   | flonisufi@gmail.com |
+      | Subject | Automation Testing  |
+
+
       Then Validate that Contact us succesfully sent
 
       @Subscription

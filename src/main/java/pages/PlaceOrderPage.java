@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.BrowserUtilities;
 import utilities.Driver;
 
 import java.io.IOException;
@@ -76,6 +77,7 @@ public class PlaceOrderPage {
             switch (elementName)
             {
                 case "NameCard":
+                    BrowserUtilities.waitForElementToAppear(nameOnCard);
                     nameOnCard.sendKeys(information);
                     break;
                 case "CardNumber":
@@ -97,6 +99,7 @@ public class PlaceOrderPage {
 
     public String orderMessage()
     {
+        BrowserUtilities.waitForElementToAppear(confirmMessage);
         return confirmMessage.getText();
     }
 

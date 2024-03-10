@@ -22,9 +22,9 @@ public class ContactUsStepDefinitions {
 
 
     @When("User give the informations")
-    public void user_give_the_informations()
+    public void user_give_the_informations(io.cucumber.datatable.DataTable dataTable)
     {
-        contactUsPage.informations();
+        contactUsPage.informations(dataTable);
 
     }
 

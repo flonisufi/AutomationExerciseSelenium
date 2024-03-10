@@ -35,6 +35,7 @@ public class ProductQuantityPage {
     {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",addToCart);
         addToCart.click();
+        BrowserUtilities.waitForElementToAppear(continueShopp);
         continueShopp.click();
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",cart);
 
