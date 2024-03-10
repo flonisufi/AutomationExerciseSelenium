@@ -30,6 +30,7 @@ public class Hooks {
     @AfterAll
     public static void after_all()
     {
+        System.out.println("You are the best QA Enginer");
         Driver.getData().quit();
     }
 
