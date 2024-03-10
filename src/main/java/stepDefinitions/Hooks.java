@@ -31,9 +31,8 @@ public class Hooks {
     }
 
     @After
-    public void AfterScenario() throws IOException
+    public void AfterScenario()
     {
-        System.out.println("Your the best QA Enginer");
         driver.close();
     }
 

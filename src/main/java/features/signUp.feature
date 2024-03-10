@@ -4,9 +4,9 @@
    Given User is on Automation Exercise Page
      When User is on SignUp/Login Page
 
-   @Smoke
+   @SignUp
    Scenario: Give the information in Signup Landing Page
-       When User register with name "Fannol" and existing email "fannol1@gmail.com"
+       When User register with name "Fannol" and existing email "fansnol1@gmail.com"
        When User give all personal information
        | Element   | Information    |
        | Password  | Pakokosare1    |

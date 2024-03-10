@@ -12,7 +12,7 @@ Feature: Login Functionality
 
       @LoginLogOut
       Scenario: Login User and LogOut
-        When User enter valid email "fannol1@gmail.com" and password "Pakokosare1"
+        When User enter valid email "fansnol1@gmail.com" and password "Pakokosare1"
         When User is loged Out
         Then Validate that User is redirected to Automation Exercise Page
 
