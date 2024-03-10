@@ -30,7 +30,7 @@ public class Hooks {
     @AfterAll
     public static void after_all()
     {
-        Driver.getData().close();
+        Driver.getData().quit();
     }
 
     @AfterStep
