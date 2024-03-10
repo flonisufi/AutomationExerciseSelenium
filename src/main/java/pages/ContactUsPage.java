@@ -15,11 +15,10 @@ import java.util.Map;
 
 public class ContactUsPage {
 
-    WebDriver driver = Driver.getData();
     Faker faker = new Faker();
 
     public ContactUsPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(css = "a[href='/contact_us']")
@@ -73,7 +72,7 @@ public class ContactUsPage {
             }
         }
         message.sendKeys(faker.chuckNorris().fact());
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",submit);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",submit);
         submit.click();
         BrowserUtilities.alertHandle();
     }

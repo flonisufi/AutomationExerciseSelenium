@@ -11,10 +11,11 @@ import java.io.IOException;
 
 public class CartBrandPage {
 
-    WebDriver driver = Driver.getData();
 
-    public CartBrandPage() {
-        PageFactory.initElements(driver,this);
+
+    public CartBrandPage()
+    {
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(css = ".brands-name")
@@ -22,7 +23,7 @@ public class CartBrandPage {
 
     public String getCartbrands()
     {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",cartBrands);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",cartBrands);
         return cartBrands.getText();
     }
 }

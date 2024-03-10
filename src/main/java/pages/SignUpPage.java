@@ -16,10 +16,9 @@ import java.util.Map;
 
 public class SignUpPage {
 
-    WebDriver driver = Driver.getData();
 
     public SignUpPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(css = ".fa-lock")
@@ -116,7 +115,7 @@ public class SignUpPage {
             switch (elementName)
             {
                 case "Password":
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",password);
+                    ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",password);
                     password.sendKeys(information);
                     break;
                 case "Day":
@@ -145,7 +144,7 @@ public class SignUpPage {
                     address2.sendKeys(information);
                     break;
                 case "Country":
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",country);
+                    ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",country);
                     BrowserUtilities.selectHandles(country,information);
                     break;
                 case "State":

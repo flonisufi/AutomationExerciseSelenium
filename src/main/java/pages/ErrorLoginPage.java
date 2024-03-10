@@ -10,10 +10,9 @@ import java.io.IOException;
 
 public class ErrorLoginPage {
 
-    WebDriver driver = Driver.getData();
 
     public ErrorLoginPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(css = "p[style='color: red;']")

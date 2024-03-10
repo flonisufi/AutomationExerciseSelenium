@@ -11,10 +11,10 @@ import java.io.IOException;
 
 public class LoginPage {
 
-    WebDriver driver = Driver.getData();
+
 
     public LoginPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(xpath = "//input[@placeholder='Email Address']")
@@ -45,7 +45,7 @@ public class LoginPage {
 
     public String currentTitle()
     {
-        return driver.getTitle();
+        return Driver.getData().getTitle();
     }
 
 

@@ -12,10 +12,10 @@ import java.io.IOException;
 
 public class ProductQuantityPage {
 
-    WebDriver driver = Driver.getData();
+
 
     public ProductQuantityPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(xpath = "//a[@data-product-id='3']")
@@ -33,11 +33,11 @@ public class ProductQuantityPage {
 
     public void addProduct()
     {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",addToCart);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",addToCart);
         addToCart.click();
         BrowserUtilities.waitForElementToAppear(continueShopp);
         continueShopp.click();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",cart);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",cart);
 
     }
 

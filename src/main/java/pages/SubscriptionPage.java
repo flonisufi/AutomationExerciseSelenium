@@ -12,10 +12,8 @@ import java.io.IOException;
 
 public class SubscriptionPage {
 
-    WebDriver driver = Driver.getData();
-
     public SubscriptionPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(xpath = "//a[@href='/view_cart']")
@@ -38,7 +36,7 @@ public class SubscriptionPage {
 
     public void setSubEmail(String email)
     {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",subEmail);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",subEmail);
         subEmail.sendKeys(email);
         submit.click();
     }

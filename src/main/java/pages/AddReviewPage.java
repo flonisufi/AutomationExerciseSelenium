@@ -12,10 +12,8 @@ import java.io.IOException;
 
 public class AddReviewPage {
 
-    WebDriver driver = Driver.getData();
-
     public AddReviewPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getData(),this);
     }
 
     @FindBy(css = "a[href='/product_details/3']")
@@ -38,14 +36,14 @@ public class AddReviewPage {
 
     public void goToProduct()
     {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",viewProduct);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",viewProduct);
         viewProduct.click();
     }
 
     public void giveInformations(String name,String email)
     {
         BrowserUtilities.waitForElementToAppear(nameField);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",nameField);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",nameField);
         nameField.sendKeys(name);
         emailField.sendKeys(email);
 

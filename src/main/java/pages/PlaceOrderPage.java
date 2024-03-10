@@ -15,10 +15,9 @@ import java.util.Map;
 
 public class PlaceOrderPage {
 
-    WebDriver driver = Driver.getData();
-
-    public PlaceOrderPage() {
-        PageFactory.initElements(driver,this);
+    public PlaceOrderPage()
+    {
+        PageFactory.initElements(Driver.getData(),this);
     }
 
 
@@ -56,7 +55,7 @@ public class PlaceOrderPage {
 
     public void addComment()
     {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",comment);
+        ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",comment);
         comment.sendKeys("The Product is good Quality!");
 
     }
