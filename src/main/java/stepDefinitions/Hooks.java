@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,7 +14,7 @@ import java.io.IOException;
 
 public class Hooks {
 
-    WebDriver driver = Driver.getData();
+    static WebDriver driver = Driver.getData();
 
     public Hooks()
     {
@@ -30,10 +27,10 @@ public class Hooks {
         driver.get("https://automationexercise.com/");
     }
 
-    @After
-    public void AfterScenario()
+    @AfterAll
+    public static void before_or_after_all()
     {
-        driver.close();
+        driver.quit();
     }
 
     @AfterStep

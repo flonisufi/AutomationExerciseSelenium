@@ -1,4 +1,5 @@
- Feature: Register User with existing email
+@Test
+Feature: Register User with existing email
 
    Background:
    Given User is on Automation Exercise Page
@@ -6,7 +7,7 @@
 
    @SignUp
    Scenario: Give the information in Signup Landing Page
-       When User register with name "Flonnii" and existing email "florryyii2@gmail.com"
+       When User register with name "Flonnii" and existing email "florsrsyyii2@gmail.com"
        When User give all personal information
        | Element   | Information    |
        | Password  | Pakokosare1    |

@@ -1,3 +1,4 @@
+@Test @Login
 Feature: Login Functionality
 
   Background:
@@ -5,14 +6,13 @@ Feature: Login Functionality
     When User is on SignUp/Login Page
 
     @ErrorLogin
-
   Scenario: Login User with incorrect credentials
-      When User enter invalid email "flonbaba@gmail.com" and password "1234"
+      When User enter email "invalid" and password "invalid"
       Then An error message should be displayed
 
       @LoginLogOut
       Scenario: Login User and LogOut
-        When User enter valid email "florryyii2@gmail.com" and password "Pakokosare1"
+        When User enter email "valid" and password "valid"
         When User is loged Out
         Then Validate that User is redirected to Automation Exercise Page
 

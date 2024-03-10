@@ -1,3 +1,4 @@
+@Test
 Feature: End to End
 
   Background:

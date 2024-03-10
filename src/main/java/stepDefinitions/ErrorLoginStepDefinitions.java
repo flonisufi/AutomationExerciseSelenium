@@ -12,9 +12,17 @@ public class ErrorLoginStepDefinitions {
     ErrorLoginPage errorLoginPage = new ErrorLoginPage();
 
 
-    @When("User enter invalid email {string} and password {string}")
-    public void user_is_loged_in_with_invalid_email_and_password(String email, String password)
-    {
+    @When("User enter email {string} and password {string}")
+    public void user_is_loged_in_with_email_and_password(String email, String password) {
+        if (email.equalsIgnoreCase("invalid")){
+            email = "flonbaba@gmail.com";
+            password = "1234";
+        }
+        else
+        {
+            email = "florryyii2@gmail.com";
+            password = "Pakokosare1";
+        }
         loginPage.userLogedIn(email,password);
 
     }
