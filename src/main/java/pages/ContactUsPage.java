@@ -69,6 +69,7 @@ public class ContactUsPage {
                     break;
                 case "Subject":
                     subject.sendKeys(information);
+                    break;
             }
         }
         message.sendKeys(faker.chuckNorris().fact());
