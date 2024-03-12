@@ -31,7 +31,7 @@ public class Hooks {
     public static void after_all()
     {
         System.out.println("You are the best QA Enginer");
-        Driver.getData().quit();//
+        Driver.getData().quit();
     }
 
     @AfterStep
