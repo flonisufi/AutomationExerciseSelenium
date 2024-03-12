@@ -39,10 +39,10 @@ Feature: End to End
             When User Place Order and Give Bank Card Informations
             | Element    | Information |
             | NameCard   | FlonBaba    |
-            | CardNumber | 1234        |
-            | CVC        | 06          |
-            | Exp        |  11         |
-            | Year       |  2023       |
+            | CardNumber | ****        |
+            | CVC        | ****        |
+            | Exp        | ****        |
+            | Year       | ****        |
 
             Then Validate that Product is ordered
 

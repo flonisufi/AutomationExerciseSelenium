@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class PlaceOrderPage {
 
+    Faker faker = new Faker();
+
     public PlaceOrderPage()
     {
         PageFactory.initElements(Driver.getData(),this);
@@ -80,16 +82,16 @@ public class PlaceOrderPage {
                     nameOnCard.sendKeys(information);
                     break;
                 case "CardNumber":
-                    cardNumber.sendKeys(information);
+                    cardNumber.sendKeys(faker.business().creditCardNumber());
                     break;
                 case "CVC":
-                    cardCvc.sendKeys(information);
+                    cardCvc.sendKeys(faker.business().creditCardExpiry());
                     break;
                 case "Exp":
-                    expMonth.sendKeys(information);
+                    expMonth.sendKeys(faker.business().creditCardExpiry());
                     break;
                 case "Year":
-                    expYear.sendKeys(information);
+                    expYear.sendKeys(faker.business().creditCardExpiry());
                     break;
             }
         }

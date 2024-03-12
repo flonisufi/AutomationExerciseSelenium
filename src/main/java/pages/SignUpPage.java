@@ -16,6 +16,8 @@ import java.util.Map;
 
 public class SignUpPage {
 
+    Faker faker = new Faker();
+
 
     public SignUpPage() {
         PageFactory.initElements(Driver.getData(),this);
@@ -116,7 +118,7 @@ public class SignUpPage {
             {
                 case "Password":
                     ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",password);
-                    password.sendKeys(information);
+                    password.sendKeys("Pakokosare1");
                     break;
                 case "Day":
                     BrowserUtilities.selectHandles(days,information);
@@ -129,32 +131,32 @@ public class SignUpPage {
                     newsLetter.click();
                     break;
                 case "FirstName":
-                    firstName.sendKeys(information);
+                    firstName.sendKeys(faker.name().firstName());
                     break;
                 case "LastName":
-                    lastName.sendKeys(information);
+                    lastName.sendKeys(faker.name().lastName());
                     break;
                 case "Company":
                     company.sendKeys(information);
                     break;
                 case "Address1":
-                    address1.sendKeys(information);
+                    address1.sendKeys(faker.internet().emailAddress());
                     break;
                 case "Address2":
-                    address2.sendKeys(information);
+                    address2.sendKeys(faker.internet().emailAddress());
                     break;
                 case "Country":
                     ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",country);
                     BrowserUtilities.selectHandles(country,information);
                     break;
                 case "State":
-                    state.sendKeys(information);
+                    state.sendKeys(faker.address().state());
                     break;
                 case "City":
-                    city.sendKeys(information);
+                    city.sendKeys(faker.address().city());
                     break;
                 case "ZipCode":
-                    zipCode.sendKeys(information);
+                    zipCode.sendKeys(faker.address().zipCode());
                     break;
                 case "MobilePh":
                     mobileNumber.sendKeys(information);

@@ -10,19 +10,19 @@ Feature: Register User with existing email
        When User register with name "valid" and existing email "valid"
        When User give all personal information
        | Element   | Information    |
-       | Password  | Pakokosare1    |
+       | Password  | ***********    |
        | Day       | 6              |
        | Month     | May            |
        | Year      | 2004           |
-       | FirstName | Flon           |
-       | LastName  | Isufi          |
+       | FirstName | *****          |
+       | LastName  | *****          |
        | Company   | Kin An Carta   |
-       | Address1  | Qerqiz topulli |
-       | Address2  | Gavran         |
+       | Address1  | ***********    |
+       | Address2  | ***********    |
        | Country   | Canada         |
-       | State     | Kosova         |
-       | City      | Gjilan         |
-       | ZipCode   | 3000           |
+       | State     | ******         |
+       | City      | ******         |
+       | ZipCode   | *****          |
        | MobilePh  | 049445517      |
 
        Then Validate that user is registered
