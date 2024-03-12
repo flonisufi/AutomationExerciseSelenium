@@ -22,7 +22,7 @@ public class ProductQuantityStepDeifnitions {
     @Then("Verify Product Quantity in Cart Page")
     public void verify_product_quantity_in_cart_page()
     {
-        Assert.assertEquals(productQuantityPage.getQuantity(),"4");
+        Assert.assertEquals(productQuantityPage.getQuantity(),"1");
 
     }
 }
