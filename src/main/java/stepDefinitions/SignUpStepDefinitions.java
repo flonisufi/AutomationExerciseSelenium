@@ -21,7 +21,6 @@ public class SignUpStepDefinitions  {
 
     SignUpPage signUpPage = new SignUpPage();
 
-
     @Given("User is on Automation Exercise Page")
     public void user_is_on_register_page()
     {

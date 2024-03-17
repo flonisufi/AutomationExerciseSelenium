@@ -30,6 +30,9 @@ public class ProductQuantityPage {
     @FindBy(css = ".disabled")
     private WebElement quantity;
 
+    @FindBy(css = ".cart_quantity_delete")
+    private WebElement remove;
+
 
     public void addProduct()
     {
@@ -44,7 +47,10 @@ public class ProductQuantityPage {
 
     public String getQuantity()
     {
-        return quantity.getText();
+        BrowserUtilities.waitForElementToAppear(quantity);
+        String text = quantity.getText();
+        remove.click();
+        return text;
     }
 
 
