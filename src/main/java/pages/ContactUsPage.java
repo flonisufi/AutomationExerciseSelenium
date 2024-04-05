@@ -75,10 +75,12 @@ public class ContactUsPage {
         ((JavascriptExecutor) Driver.getData()).executeScript("arguments[0].scrollIntoView(true);",submit);
         submit.click();
         BrowserUtilities.alertHandle();
+
     }
 
     public String messageValidation()
     {
+        BrowserUtilities.waitForElementToAppear(confirmMessage);
         return confirmMessage.getText();
     }
 }
