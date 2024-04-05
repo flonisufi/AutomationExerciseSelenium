@@ -16,7 +16,7 @@ public class ConfigurationReader {
         }
         catch (Exception e){
             e.printStackTrace();
-            System.out.println("Error occured while reading config file");
+            System.out.println("Error occurred while reading config file");
         }
     }
     public static String getProperty(String key){

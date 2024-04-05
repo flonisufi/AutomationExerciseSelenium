@@ -5,6 +5,9 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.ErrorLoginPage;
 import pages.LoginPage;
+import utilities.ConfigurationReader;
+
+import java.lang.module.Configuration;
 
 public class ErrorLoginStepDefinitions {
 
@@ -19,8 +22,8 @@ public class ErrorLoginStepDefinitions {
         }
         else
         {
-            email = "florryyii2@gmail.com";
-            password = "Pakokosare1";
+            email = ConfigurationReader.getProperty("email");
+            password = ConfigurationReader.getProperty("password");
         }
         loginPage.userLogedIn(email,password);
 
